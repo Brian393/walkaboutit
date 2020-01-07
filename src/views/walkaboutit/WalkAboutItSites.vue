@@ -21,7 +21,7 @@
 </Accordion>
 
 <Accordion :open="false">
-  <h3 slot="header">What/Who/Why Deep Time Chicago?</h3>
+  <h3 slot="header">Who/What/Why Deep Time?</h3>
   <div class="flex">
     <p><strong></strong>: title</p>
   </div>
@@ -54,7 +54,7 @@ import Accordion from '../../components/Accordion.vue'
 import {eventBus} from '../../main'
 
 export default {
-  name: 'WatershedAcknowledgement',
+  name: 'WalkAboutItSites',
   components: {
     Accordion,
     AppLightBox

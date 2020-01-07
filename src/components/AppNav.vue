@@ -94,11 +94,11 @@ export default {
     return {
       nav: [],
       navSubItems: [],
-      watershed: {
+      walkaboutit: {
         items: [
           {
             name: '',
-            href: '/watershed/acknowledgement'
+            href: '/walkaboutit/sites'
           }
         ]
       },
@@ -145,8 +145,8 @@ export default {
   },
   methods: {
     initNav: function () {
-      if (/watershed/.test(this.$route.name)) {
-        this.nav = this.watershed
+      if (/walkaboutit/.test(this.$route.name)) {
+        this.nav = this.walkaboutit
       } else if (/megaregion/.test(this.$route.name)) {
         this.nav = this.megaregion
       } else if (/bioregion/.test(this.$route.name)) {
@@ -156,10 +156,6 @@ export default {
       }
       if (/watershedDams/.test(this.$route.name)) {
         this.navSubItems = this.subItems.dams
-      } else if (/megaregionCrops/.test(this.$route.name)) {
-        this.navSubItems = this.subItems.crops
-      } else if (/bioregionSalmon/.test(this.$route.name)) {
-        this.navSubItems = this.subItems.salmon
       } else {
         this.navSubItems = []
       }

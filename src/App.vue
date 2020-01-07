@@ -4,7 +4,7 @@
       <nav>
         <span>&nbsp;</span>
         <router-link to="/megaregion/introduction" v-bind:class="{active: $route.name && $route.name.match('megaregion')}" @click.native="routeClick('/megaregion/introduction')"></router-link>
-        <router-link to="/watershed/acknowledgement" v-bind:class="{active: $route.name && $route.name.match('watershed')}" @click.native="routeClick('/watershed/acknowledgement')">Walk About It</router-link>
+        <router-link to="/walkaboutit/sites" v-bind:class="{active: $route.name && $route.name.match('walkaboutit')}" @click.native="routeClick('/walkaboutit/sites')">Walk About It</router-link>
         <router-link to="/bioregion/introduction" v-bind:class="{active: $route.name && $route.name.match('bioregion')}" @click.native="routeClick('/bioregion/introduction')"></router-link>
         <span>&nbsp;</span>
         <div v-on:click="scrollToAside" id="aside-scroll-to" title="Skip To Content">
@@ -87,7 +87,7 @@ aside {
 #aside-wraper {
   position: sticky;
   top: 0;
-  color: #4B004E;                               /*toggle x color*/
+  color: white;                               /*toggle x color*/
   background-color: #00320D;               /*background of sidebar title*/
   z-index: 1;
   height: 51px;
@@ -197,7 +197,7 @@ font-weight: bold; font-style: italic; color: #333333;
   }
   #content, aside {
     overflow-x: hidden;           /*these scrolls affect hamburger button at upper right! */
-    overflow-y: auto;        /*they create all kinds of weird micro arrows, very strange */
+    overflow-y: auto;        /*they create weird micro arrows, very strange */
     max-height: 100vh;
   }
 }

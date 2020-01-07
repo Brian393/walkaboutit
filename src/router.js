@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import WatershedAcknowledgement from './views/watershed/WatershedAcknowledgement.vue'
-import MapWatershed from './components/MapWatershed.vue'
+import WalkAboutItSites from './views/walkaboutit/WalkAboutItSites.vue'
+import MapWalkAboutIt from './components/MapWalkAboutIt.vue'
 import MapMegaregion from './components/MapMegaregion.vue'
 import MapBioregion from './components/MapBioregion.vue'
 
@@ -11,14 +11,14 @@ export default new Router({
   routes: [
     {
       path: '/',
-      redirect: '/watershed/acknowledgement'
+      redirect: '/walkaboutit/sites'
     },
     {
-      path: '/watershed/acknowledgement',
-      name: 'watershedAcknowledgement',
+      path: '/walkaboutit/sites',
+      name: 'WalkAboutItSites',
       components: {
-        default: WatershedAcknowledgement,
-        map: MapWatershed
+        default: WalkAboutItSites,
+        map: MapWalkAboutIt
       }
     },
     {

@@ -105,24 +105,8 @@ export default {
       megaregion: {
         items: [
           {
-            name: 'Introduction',
+            name: '',
             href: '/megaregion/introduction'
-          },
-          {
-            name: 'Vanport',
-            href: '/megaregion/vanport'
-          },
-          {
-            name: 'Willamette',
-            href: '/megaregion/willamette'
-          },
-          {
-            name: 'Energy',
-            href: '/megaregion/energy'
-          },
-          {
-            name: 'Crops',
-            href: '/megaregion/crops'
           }
         ]
       },
@@ -137,24 +121,8 @@ export default {
       subItems: {
         vanport: [
           {
-            name: 'Vanport Mosaic',
+            name: '',
             href: '/megaregion/vanport/mosaic'
-          }
-        ],
-        willamette: [
-          {
-            name: 'Parallels',
-            href: '/megaregion/willamette/drone'
-          },
-          {
-            name: 'Columbia Slough',
-            href: '/megaregion/willamette/slough'
-          }
-        ],
-        crops: [
-          {
-            name: 'Columbia Basin Project',
-            href: '/megaregion/crops/basinproject'
           }
         ]
       }

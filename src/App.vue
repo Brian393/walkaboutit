@@ -3,9 +3,9 @@
     <main>
       <nav>
         <span>&nbsp;</span>
-        <router-link to="/megaregion/introduction" v-bind:class="{active: $route.name && $route.name.match('megaregion')}" @click.native="routeClick('/megaregion/introduction')">Megaregion</router-link>
-        <router-link to="/watershed/acknowledgement" v-bind:class="{active: $route.name && $route.name.match('watershed')}" @click.native="routeClick('/watershed/acknowledgement')">Watershed</router-link>
-        <router-link to="/bioregion/introduction" v-bind:class="{active: $route.name && $route.name.match('bioregion')}" @click.native="routeClick('/bioregion/introduction')">Bioregion</router-link>
+        <router-link to="/megaregion/introduction" v-bind:class="{active: $route.name && $route.name.match('megaregion')}" @click.native="routeClick('/megaregion/introduction')"></router-link>
+        <router-link to="/watershed/acknowledgement" v-bind:class="{active: $route.name && $route.name.match('watershed')}" @click.native="routeClick('/watershed/acknowledgement')">Walk About It</router-link>
+        <router-link to="/bioregion/introduction" v-bind:class="{active: $route.name && $route.name.match('bioregion')}" @click.native="routeClick('/bioregion/introduction')"></router-link>
         <span>&nbsp;</span>
         <div v-on:click="scrollToAside" id="aside-scroll-to" title="Skip To Content">
           <i class="material-icons">keyboard_arrow_down</i>
@@ -21,7 +21,7 @@
           <i v-if="asideHidden" class="material-icons">menu</i>
           <i v-else class="material-icons">close</i>
         </div>
-        <p id="aside-heading" v-bind:class="{hidden: this.asideHidden}">LEARNING FROM CASCADIA</p>
+        <p id="aside-heading" v-bind:class="{hidden: this.asideHidden}"></p>
       </div>
       <div id="content" v-bind:class="{hidden: this.asideHidden}" ref="asideContent">
         <router-view/>
@@ -47,7 +47,7 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: teal;      /*navbar background color */
+  background-color: #00320D;      /*navbar background color */
 }
 nav a {
   font-weight: bold;
@@ -61,7 +61,7 @@ nav a {
   line-height: 40px;
 }
 nav a.active, nav a.router-link-exact-active {
-  background-color: #008000;       /*background color when active */
+  background-color: #4B004E;       /*background color when active */
   color: white;                    /*text color when active */
 }
 nav a:hover {
@@ -70,14 +70,14 @@ nav a:hover {
 #map {
   background-color: #f4f2f0;
   height: calc(100vh - 50px);
-  border-top: thin solid #008000;
+  border-top: thin solid #00320D;
   box-sizing: border-box;
 }
 
 aside {
-  background-color: #f4f2f0;
-  border-left: medium solid #008000;
-  border-bottom: medium solid #008000;
+  background-color: white;              /*background of text panel*/
+  border-left: medium solid #00320D;
+  border-bottom: medium solid black;
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
@@ -87,8 +87,8 @@ aside {
 #aside-wraper {
   position: sticky;
   top: 0;
-  color: white;
-  background-color: #008000;
+  color: #4B004E;                               /*toggle x color*/
+  background-color: #00320D;               /*background of sidebar title*/
   z-index: 1;
   height: 51px;
 }
@@ -104,7 +104,7 @@ aside {
   display: none;
 }
 #aside-toggle:hover, #aside-scroll-to:hover {
-  color: #008000;
+  color: #ab0107;
   background-color: white;
   cursor: hand;
 }
@@ -132,14 +132,16 @@ aside .fullwidth {
   max-height: 100%;
   overflow-y: visible;
   text-align: justify;
+  color: black;                /*sidebar text color*/
 }
 
 #aside-heading {
-  margin-top: 0.8em;
+  margin-top: 0.6em;
   padding: 0;
   text-align: center;
-  font-size: 1.2em;             /* sidebar header title, "Learning" */
-  color: #dcdcdc;
+  font-size: 1.3em;             /* sidebar header title, "Learning" */
+  color: white;
+  font-weight: bold;
 
 }
 
@@ -185,7 +187,7 @@ font-weight: bold; font-style: italic; color: #333333;
   }
   #aside-heading {
     padding: 0 0.6em;
-    text-align: left;
+    text-align: CENTER;
   }
   #aside-toggle {
     display: block;

@@ -20,8 +20,8 @@ export default {
       centerPoints: {
         // #TODO: these probably could have better names like watershedIntroduction, watershedHanford, watershedHanfordLegacy to be a bit more semantically obvious
         acknowledgement: {
-          center: [-121.36, 47.7],
-          resolution: 2000
+          center: [-87.6, 41.85],
+          resolution: 140
         }
       }, // end centerPoints
       WatershedDamsIsAnimating: true,
@@ -35,7 +35,7 @@ export default {
       return [
         new Tile({
           source: new XYZ({
-            url: 'http://server.arcgisonline.com/ArcGIS/rest/services/World_Physical_Map/MapServer/tile/{z}/{y}/{x}.png'
+            url: 'https://{a-d}.basemaps.cartocdn.com/dark_nolabels/{z}/{x}/{y}.png'
           }),
           opacity: 1,
           minResolution: 5
@@ -43,56 +43,10 @@ export default {
         new Tile({
           preload: Infinity,
           source: new XYZ({
-            url: 'http://ecotopia.today/cascadia/Tiles/Cascadia-new/{z}/{x}/{y}.png'
+            url: 'http://deeptimechicago.org/Walkaboutit/{z}/{x}/{y}.png'
           }),
           opacity: 1,
           minResolution: 2
-        }),
-        new Tile({
-          source: new XYZ({
-            url: 'https://services.arcgisonline.com/arcgis/rest/services/World_Topo_Map/MapServer/tile/{z}/{y}/{x}'
-          }),
-          opacity: 0.7,
-          minResolution: 2,
-          maxResolution: 8
-        }),
-        new Tile({
-          preload: Infinity,
-          source: new XYZ({
-            url: 'http://ecotopia.today/cascadia/Tiles/Languages/{z}/{x}/{y}.png'
-          }),
-          opacity: 1,
-          minResolution: 2,
-          maxResolution: 16000
-        })
-      ]
-    },
-    watershedBaseLayers: function () {
-      return [
-        new Tile({
-          source: new XYZ({
-            url: 'https://server.arcgisonline.com/ArcGIS/rest/services/NatGeo_World_Map/MapServer/tile/{z}/{y}/{x}'
-          }),
-          opacity: 0.9,
-          minResolution: 2,
-          maxResolution: 16000
-        }),
-        new Tile({
-          preload: Infinity,
-          source: new XYZ({
-            url: 'http://ecotopia.today/cascadia/Tiles/Columbia/{z}/{x}/{y}.png'
-          }),
-          opacity: 1,
-          minResolution: 2,
-          maxResolution: 16000
-        }),
-        new Tile({
-          source: new XYZ({
-            url: 'https://basemap.nationalmap.gov/arcgis/rest/services/USGSTopo/MapServer/tile/{z}/{y}/{x}'
-          }),
-          opacity: 0.7,
-          minResolution: 2,
-          maxResolution: 8
         })
       ]
     },
@@ -271,7 +225,7 @@ export default {
       this.olmap.setView(new View({
         center: fromLonLat(this.centerPoints.acknowledgement.center),
         resolution: this.centerPoints.acknowledgement.resolution,
-        minResolution: 40,
+        minResolution: 10,
         maxResolution: 32000
       }))
     },
